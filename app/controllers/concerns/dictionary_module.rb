@@ -4,7 +4,7 @@ require 'net/http'
 require 'json'
 
 class DictionaryModule
-  @@url = URI.parse('https://processing-module.onrender.com/api/process')
+  @@url = URI.parse('https://dictionary-module.onrender.com/api/process')
 
   def self.get_info_about(word_list)
     url = @@url

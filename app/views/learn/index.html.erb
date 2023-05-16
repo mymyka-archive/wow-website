@@ -1,0 +1,26 @@
+<h1>Learn</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @word_list.each do |word| %>
+    <div class="col">
+      <div class="card">
+        <img src="<%= @word_cards[word]["pictures"][0] %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= word %></h5>
+          <p class="card-text">Meanings:</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <% @word_cards[word]["meanings"].each do |meaning| %>
+            <li class="list-group-item"><%= meaning %></li>
+          <% end %>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
